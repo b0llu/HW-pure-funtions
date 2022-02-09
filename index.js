@@ -128,3 +128,12 @@ const infiniteFunctions = (num, ...args) => args.reduce(reducer1, num)
 
 console.log(infiniteFunctions(4, add, square, minus, add, minus))
 //-------------------------------------------------------------------------------
+
+//return an array with strings
+const forVowels = ['apple', 'orange', 'mango', 'papaya', 'cry', 'fry', 'sync']
+const vowelArr = ['a', 'e', 'i', 'o', 'u']
+const str = 'cry'
+
+const isVowelStr = str => vowelArr.filter((ch) => str.includes(ch)).length === 0 ? false : true
+
+console.log(forVowels.filter(str => isVowelStr(str)))
