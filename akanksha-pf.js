@@ -120,13 +120,12 @@ const arr8 = [{
         name: "Capsicum"
     }
 ]
-const arrWithType = obj => {
-    if (obj.name.length > 5) {
-        obj.type = "Vegetable"
-    } else {
-        obj.type = "Fruit"
-    }
-    return obj
+const arrWithType = (obj) => obj.length > 5 ? {
+    ...obj,
+    type: "Vegetable"
+} : {
+    ...obj,
+    type: "Fruit"
 }
 console.log(arr8.map(arrWithType))
 
