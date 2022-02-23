@@ -129,10 +129,11 @@ const add = (num) => num + 1;
 const square = (num) => num * num;
 const minus = (num) => num - 2;
 
-const reducer1 = (initial, current) => current(initial);
-const infiniteFunctions = (num, ...args) => args.reduce(reducer1, num);
+const infiniteFunctions = (num, ...args) =>
+  args.reduce((initial, current) => current(initial), num);
 
 console.log(infiniteFunctions(4, add, square, minus, add, minus));
+
 //-------------------------------------------------------------------------------
 
 //return an array with strings
