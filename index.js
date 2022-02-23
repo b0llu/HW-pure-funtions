@@ -137,12 +137,26 @@ console.log(infiniteFunctions(4, add, square, minus, add, minus));
 
 //return an array with strings
 const forVowels = ["apple", "orange", "mango", "papaya", "cry", "fry", "sync"];
-const vowelArr = ["a", "e", "i", "o", "u"];
+const vowelArr = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 
 const isVowelStr = (str) =>
   vowelArr.filter((ch) => str.includes(ch)).length === 0 ? false : true;
 
 console.log(forVowels.filter((str) => isVowelStr(str)));
+
+// const result = arr.reduce((acc, curr) => {
+//   if (
+//     curr.includes("a") ||
+//     curr.includes("u") ||
+//     curr.includes("e") ||
+//     curr.includes("i") ||
+//     curr.includes("o")
+//   ) {
+//     return [...acc, curr];
+//   } else {
+//     return [...acc];
+//   }
+// }, []);
 
 // asyn bang bang
 let interval;
